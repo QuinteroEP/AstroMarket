@@ -1,0 +1,137 @@
+---
+const response = await fetch("http://localhost:3000/product_data.json");
+const produt_data = await response.json();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>AstroMarketplace</title>
+	</head>
+	<header>
+		<div class="header">
+			<h1>AstroMarketplace</h1>
+			<a href="/vendor">Portal de vendedor</a>
+		</div>
+	</header>
+
+	<body>
+		<h1>Productos Disponibles</h1>
+
+		<table>
+			<thead>
+				<tr>Item</tr>
+				<tr>Precio</tr>
+				<tr>Inventario Actual</tr>
+				<tr></tr>
+			</thead>
+			<tbody>
+				{produt_data.map((producto: { nombre: string; precio: unknown; inventario: unknown; }) => (
+				<tr>
+					<td>{producto.nombre}</td>
+					<td>{producto.precio}</td>
+					<td>{producto.inventario}</td>
+					<td><button>Comprar</button></td>
+				</tr>
+				))}
+			</tbody>
+		</table>
+	</body>
+
+	<footer>
+		<div class="footer">
+			<p>Universidad Javeriana - Arquitectura de Software</p>
+			<p>Juan Romero, Kamilt Diaz, Pablo Quintero</p>
+		</div>
+	</footer>
+</html>
+
+<style>
+	html
+	{
+	height: 100%;
+	margin: 0;
+	}
+
+	body
+	{
+	height: 100%;
+  	margin: 0;
+	display: flex;
+  	flex-direction: column;
+	}
+
+	main 
+	{
+	flex: 1;
+	}
+
+	.title
+	{
+	text-align: center;
+	}
+
+	.header
+	{
+	background-color: darkblue;
+	border: solid black 2px;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;}
+
+	.header a
+	{
+	background-color: white;
+	border: solid black 2px;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 5px;
+	}
+
+	footer
+	{
+	background-color: blue;
+	border: solid black 2px;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+
+	.formulario
+	{
+	border: solid black 2px;
+	border-radius: 2px;
+	background-color: white;
+	font-size: 30px;
+	margin: 10px;
+	padding: 10px;}
+
+	button
+	{
+	font-size: 20px;
+	}
+
+	table
+	{
+	border: solid black 2px;
+	text-align: center;
+	}
+
+	td
+	{
+	font-size: 20px;
+	border: solid black 2px;
+	}
+
+	tr
+	{
+	font-size: 20px;
+	}
+</style>
