@@ -359,3 +359,181 @@ Processing by DataController#productIndex as JSON
 Completed 200 OK in 27ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/product_data.json" for ::1 at 2025-10-01 17:03:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 59ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:20:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 34ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:31:19 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 88ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:32:54 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 43ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:41:08 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 97ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:44:56 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 41ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:45:02 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:45:20 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:45:28 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:45:38 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 34ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.3ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:47:48 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 55ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:47:56 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 29ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:49:39 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 26ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:49:41 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:49:51 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:51:25 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 31ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:51:35 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 28ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sales_data.json" for ::1 at 2025-10-02 11:55:41 -0500
+Processing by DataController#salesIndex as JSON
+Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sales_data.json" for ::1 at 2025-10-02 11:56:42 -0500
+Processing by DataController#salesIndex as JSON
+Completed 200 OK in 38ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 11:59:44 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 43ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-10-02 21:28:53 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/pablo/.local/share/mise/installs/ruby/3.3.9/lib/ruby/gems/3.3.0/gems/railties-8.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/pablo/.local/share/mise/installs/ruby/3.3.9/lib/ruby/gems/3.3.0/gems/railties-8.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 119ms (Views: 31.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/icon.png" for ::1 at 2025-10-02 21:28:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:29:05 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 149ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:31:47 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 33ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:31:52 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:32:39 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 46ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:32:46 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:33:12 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:33:19 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:36:00 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 50ms (Views: 11.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:36:03 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 41ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:36:34 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 45ms (Views: 12.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:41:40 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 88ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:43:36 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 44ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-02 21:45:01 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 50ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

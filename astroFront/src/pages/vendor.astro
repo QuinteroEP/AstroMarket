@@ -1,7 +1,3 @@
----
-
----
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -12,23 +8,40 @@
 	</head>
 	<header>
 		<div class="header">
-			<h1>AstroMarketplace - Portal de vendedor</h1>
+			<h1>AstroMarketplace - Portal de Vendedeor</h1>
 		</div>
 	</header>
 
 	<body>
 		<h1>Mi Catalogo</h1>
 
+		<table id="productos">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Precio Unitario</th>
+					<th>Inventario Actual</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody id="productos_data">
+
+			</tbody>
+		</table>
+
+		<h1>Notificaciones</h1>
+
 		<table>
 			<thead>
-				<tr>Item</tr>
-				<tr>Precio Unitario</tr>
-				<tr>Inventario Actual</tr>
-				<tr></tr>
-				<tr></tr>
+				<tr>
+					<th></th>
+					<th>Item</th>
+					<th>Cantidad</th>
+					<th></th>
+				</tr>
 			</thead>
 			<tbody>
-				
+
 			</tbody>
 		</table>
 	</body>
@@ -76,6 +89,15 @@
 	padding-left: 20px;
 	padding-right: 20px;}
 
+	.header a
+	{
+	background-color: white;
+	border: solid black 2px;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 5px;
+	}
+
 	footer
 	{
 	background-color: blue;
@@ -113,8 +135,43 @@
 	border: solid black 2px;
 	}
 
+	tbody tr:nth-child(odd)
+	{
+		background-color: cyan;
+	}
+
 	tr
 	{
 	font-size: 20px;
 	}
+
 </style>
+
+<script>
+	async function loadProductos() {
+    const response = await fetch("http://localhost:3000/product_data.json");
+    const productos = await response.json();
+
+    const tbody = document.getElementById("productos_data");
+    tbody!.innerHTML = productos.map((producto: { nombre: any; precio: any; inventario: any; id: any; }) => `
+      <tr>
+        <td>${producto.nombre}</td>
+        <td>${producto.precio}</td>
+        <td>${producto.inventario}</td>
+        <td><button class="Purchase" data-id="${producto.id}">reabastecer</button></td>
+      </tr>
+    `).join("");
+  }
+
+  loadProductos();
+
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll(".Purchase").forEach((btn) => {
+			btn.addEventListener("click", async (item) => {
+				const target = item.currentTarget as HTMLButtonElement;
+				const id = target.dataset.id;
+				console.log("Nueva compra. ID  ", id);
+			});
+		});
+	});
+</script>

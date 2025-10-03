@@ -1,0 +1,47 @@
+services:
+  rails-web:
+    build:
+      context: ./marketBack
+      dockerfile: Dockerfile
+    command: bash -lc "bundle exec rails server -b 0.0.0.0 -p 3000"
+    volumes:
+      - ./marketBack:/app
+    ports:
+      - "3000:3000"
+    environment:
+      RAILS_ENV: development
+      KAFKA_BROKERS: upbeat_wu:9092
+      CASSANDRA_HOSTS: cassandra-db
+    networks:
+      - arq_net
+
+  rails-karafka:
+    build:
+      context: ./marketBack
+      dockerfile: Dockerfile
+    command: bash -lc "bundle exec karafka server"
+    volumes:
+      - ./marketBack:/app
+    environment:
+      RAILS_ENV: development
+      KAFKA_BROKERS: upbeat_wu:9092
+      CASSANDRA_HOSTS: cassandra-db
+    depends_on:
+      - rails-web
+    networks:
+      - arq_net
+      
+  astro:
+    build:
+      context: ./astroFront
+      dockerfile: Dockerfile
+    ports:
+      - "4321:4321"
+    networks:
+      - arq_net
+    depends_on:
+      - rails-web
+
+networks:
+   arq_net:
+    external: true
