@@ -1,11 +1,12 @@
 # AstroMarket
-Web Marketplace built with Astro JS, Ruby and Kafka
+Web Marketplace built with Astro JS, Ruby on Rails and Kafka
 
 # CARGAR BASE DE DATOS AL CONTAINER DE CASSANDRA
 ## Schemas y tablas: 
 1. productos.cql: product_info.csv
 2. vendedores.cql: notificaciones.cvs, ventas.csv
 
+## Pasos
 1. Instalar la imagen de Cassandra 4.1
 2. Cargar los Schemas de la base de datos con 'docker exec -i [nombre-container-cassandra] cqlsh < [nombreShcema].cql'
 3. Cargar la data de cada tabla con 'docker cp [nombreTabla].csv [nombre-container-cassandra]:/tmp/' y 'docker exec -it [nombre-container-cassandra] cqlsh -e "COPY [nombreShcema].[nombreTabla] FROM '/tmp/[nombreTabla].csv' WITH HEADER = true;"'
