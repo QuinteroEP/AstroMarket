@@ -2,7 +2,7 @@
 Web Marketplace built with Astro JS, Ruby on Rails and Kafka
 
 # CARGAR BASE DE DATOS AL CONTAINER DE CASSANDRA
-## Schemas y tablas: 
+## Schemas y tablas 
 1. productos.cql: product_info.csv
 2. vendedores.cql: notificaciones.cvs, ventas.csv
 
@@ -14,6 +14,6 @@ Web Marketplace built with Astro JS, Ruby on Rails and Kafka
 Ejemplo: 'docker exec -i cassandra cqlsh < productos.cql', 'docker exec -it cassandra cqlsh -e "COPY productos.product_info FROM '/tmp/product_info.csv' WITH HEADER = true;"'
 
 # INSTALACION POR DOCKER
-1. Instalar la imagene de Kafka
+1. Instalar la imagen de Kafka
 2. Construir y ejecutar el Container del sistema con docker-compose up --build
 3. Acceder a la pagina por 'http://localhost:4321'
