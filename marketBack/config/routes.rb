@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   Rails.application.routes.draw do
     get "/product_data", to: "data#productIndex"
     get "/sales_data", to: "data#salesIndex"
+    post "kafka/publish", to: "kafka#publish"
   end
 
 end

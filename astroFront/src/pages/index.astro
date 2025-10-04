@@ -149,14 +149,22 @@
       	</tr>`).join("");
 
     document.querySelectorAll(".Purchase").forEach((btn) => {
-      btn.addEventListener("click", (event) => {
+      btn.addEventListener("click", async (event) => {
 		const target = event.currentTarget as HTMLButtonElement;
 		const id = target.dataset.id;
-		console.log("Nueva compra. ID", id);
+
+		const messageSent = await fetch("http://localhost:3000/kafka/publish", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ message: id }),
+        	});
+			
+		alert('Producto comprado.')
+    	location.reload()
+
 		});
     });
   }
 
-  // Run once page is loaded
   document.addEventListener("DOMContentLoaded", loadProductos);
 </script>

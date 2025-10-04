@@ -548,3 +548,1249 @@ Processing by DataController#productIndex as JSON
 Completed 200 OK in 65ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/product_data.json" for ::1 at 2025-10-03 18:42:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 46ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 18:57:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 48ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 18:57:11 -0500
+  
+ActionController::RoutingError (uninitialized constant KafkaController)
+Caused by: ActionDispatch::MissingController (uninitialized constant KafkaController)
+Caused by: NameError (uninitialized constant KafkaController)
+
+Information for: ActionController::RoutingError (uninitialized constant KafkaController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant KafkaController):
+  
+actionpack (8.0.3) lib/action_dispatch/http/request.rb:102:in `rescue in controller_class_for'
+actionpack (8.0.3) lib/action_dispatch/http/request.rb:98:in `controller_class_for'
+actionpack (8.0.3) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.3) lib/rails/engine/lazy_route_set.rb:60:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:44:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+activerecord (8.0.3) lib/active_record/migration.rb:670:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+
+Information for cause: NameError (uninitialized constant KafkaController):
+  
+activesupport (8.0.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (8.0.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (8.0.3) lib/action_dispatch/http/request.rb:99:in `controller_class_for'
+actionpack (8.0.3) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.3) lib/rails/engine/lazy_route_set.rb:60:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:44:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+activerecord (8.0.3) lib/active_record/migration.rb:670:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:06:17 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 23ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:06:20 -0500
+  
+AbstractController::ActionNotFound (The action 'publish' could not be found for KafkaController):
+  
+actionpack (8.0.3) lib/abstract_controller/base.rb:147:in `process'
+actionpack (8.0.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.3) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.3) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.3) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.3) lib/rails/engine/lazy_route_set.rb:60:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:44:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+activerecord (8.0.3) lib/active_record/migration.rb:670:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+Started GET "/kafka/publish" for ::1 at 2025-10-03 19:06:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/kafka/publish"):
+  
+Started GET "/apple-touch-icon-precomposed.png" for ::1 at 2025-10-03 19:06:54 -0500
+Started GET "/apple-touch-icon.png" for ::1 at 2025-10-03 19:06:54 -0500
+Started GET "/favicon.ico" for ::1 at 2025-10-03 19:06:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:10:09 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:10:11 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:10:13 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (uninitialized constant KafkaController::KafkaProducerService):
+  
+app/controllers/kafka_controller.rb:3:in `publish'
+Started GET "/kafka/publish" for ::1 at 2025-10-03 19:10:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/kafka/publish"):
+  
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:13:07 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 69ms (Views: 2.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:13:09 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (uninitialized constant KafkaController::KafkaProducerService):
+  
+app/controllers/kafka_controller.rb:3:in `publish'
+Started GET "/kafka/publish" for ::1 at 2025-10-03 19:13:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/kafka/publish"):
+  
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:15:36 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 28ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:15:38 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (uninitialized constant KafkaController::KafkaProducerService):
+  
+app/controllers/kafka_controller.rb:3:in `publish'
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:16:16 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (uninitialized constant KafkaController::KafkaProducerService):
+  
+app/controllers/kafka_controller.rb:3:in `publish'
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:17:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 36ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:17:29 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `id' for an instance of KafkaController):
+  
+app/controllers/kafka_controller.rb:5:in `publish'
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:18:24 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/kafka_controller.rb:5:in `+'
+app/controllers/kafka_controller.rb:5:in `publish'
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:18:51 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:20:10 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 25ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:20:13 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"id"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:22:20 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:22:38 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:23:08 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 93ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:23:10 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"id"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:23:17 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 34ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:25:12 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 36ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:25:13 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:25:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 25ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:30:20 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:30:23 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:30:24 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:31:17 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 30ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:31:30 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 66ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:31:33 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:31:35 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:31:50 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:31:56 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 6.4ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:34:17 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:34:24 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 46ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:34:50 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:35:20 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:38:36 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 47ms (Views: 5.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:localhost:9092/1]: localhost:9092/1: Disconnected: connection closed by peer: receive 0 after POLLIN (after 735479ms in state UP)
+rdkafka: [thrd:localhost:9092/1]: localhost:9092/1: Disconnected: connection reset by peer (after 2ms in state APIVERSION_QUERY)
+rdkafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Disconnected: connection reset by peer (after 0ms in state APIVERSION_QUERY)
+rdkafka: [thrd:localhost:9092/1]: localhost:9092/1: Disconnected: connection reset by peer (after 0ms in state APIVERSION_QUERY, 1 identical error(s) suppressed)
+rdkafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Disconnected: connection reset by peer (after 1ms in state APIVERSION_QUERY, 1 identical error(s) suppressed)
+rdkafka: [thrd:localhost:9092/1]: localhost:9092/1: Connect to ipv4#127.0.0.1:9092 failed: Connection refused (after 1ms in state CONNECT)
+rdkafka: [thrd:localhost:9092/1]: localhost:9092/1: Connect to ipv6#[::1]:9092 failed: Connection refused (after 0ms in state CONNECT)
+rdkafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Connection refused (after 0ms in state CONNECT)
+rdkafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Connection refused (after 0ms in state CONNECT)
+rdkafka: [thrd:localhost:9092/1]: localhost:9092/1: Connect to ipv4#127.0.0.1:9092 failed: Connection refused (after 0ms in state CONNECT)
+rdkafka: [thrd:localhost:9092/1]: localhost:9092/1: Connect to ipv6#[::1]:9092 failed: Connection refused (after 0ms in state CONNECT)
+rdkafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Disconnected: connection reset by peer (after 0ms in state APIVERSION_QUERY)
+rdkafka: [thrd:localhost:9092/1]: localhost:9092/1: Disconnected: connection reset by peer (after 0ms in state APIVERSION_QUERY)
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+rdkafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Disconnected: connection reset by peer (after 1ms in state APIVERSION_QUERY)
+rdkafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Disconnected: connection reset by peer (after 1ms in state APIVERSION_QUERY, 1 identical error(s) suppressed)
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 19:46:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 72ms (Views: 1.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:46:58 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 19:55:38 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:00:48 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:04:28 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:09:33 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 24ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:09:37 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:11:24 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:13:02 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:14:30 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:16:56 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:18:13 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:19:53 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:21:15 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:22:34 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:25:20 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:26:51 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:27:16 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:29:09 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 30ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:29:11 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:31:41 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:32:59 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:34:03 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:34:38 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:35:40 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:36:46 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:37:56 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:39:37 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:42:38 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184", "kafka"=>{"message"=>"bba95993-7d85-4e90-936a-e3407d8ee184"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:43:41 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:44:43 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:45:23 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 20:47:14 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100", "kafka"=>{"message"=>"4d9c1a66-7471-400e-85ee-666f0b383100"}}
+Completed 204 No Content in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:53:34 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 52ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:54:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 34ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kafka/publish" for ::1 at 2025-10-03 20:54:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/kafka/publish"):
+  
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:54:14 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.8ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:54:31 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 55ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:54:50 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 55ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:54:52 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:55:07 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:55:07 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:56:09 -0500
+Processing by DataController#productIndex as JSON
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Cassandra::Errors::InvalidError (table product_info does not exist):
+  
+app/controllers/data_controller.rb:3:in `productIndex'
+Started GET "/product_data.json" for ::1 at 2025-10-03 20:56:24 -0500
+Processing by DataController#productIndex as JSON
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Cassandra::Errors::InvalidError (table product_info does not exist):
+  
+app/controllers/data_controller.rb:3:in `productIndex'
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:00:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MarketBack'*/[0m
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 31ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:00:17 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 31ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 21:00:22 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"0655a10e-7109-4e48-bd25-c8d7cc5f1cab", "kafka"=>{"message"=>"0655a10e-7109-4e48-bd25-c8d7cc5f1cab"}}
+Completed 204 No Content in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:04:14 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 59ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:04:50 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 114ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+rdkafka: [thrd:main]: Topic buyer_topic partition count changed from 1 to 0
+
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+[0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+Started POST "/kafka/publish" for ::1 at 2025-10-03 21:05:54 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"d32855b0-fdbf-4637-8028-418f275b9d7c", "kafka"=>{"message"=>"d32855b0-fdbf-4637-8028-418f275b9d7c"}}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:06:02 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:07:09 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 29ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 21:07:11 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"0655a10e-7109-4e48-bd25-c8d7cc5f1cab", "kafka"=>{"message"=>"0655a10e-7109-4e48-bd25-c8d7cc5f1cab"}}
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:07:18 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:08:33 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 40ms (Views: 3.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kafka/publish" for ::1 at 2025-10-03 21:08:35 -0500
+Processing by KafkaController#publish as */*
+  Parameters: {"message"=>"d32855b0-fdbf-4637-8028-418f275b9d7c", "kafka"=>{"message"=>"d32855b0-fdbf-4637-8028-418f275b9d7c"}}
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:08:37 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/product_data.json" for ::1 at 2025-10-03 21:09:38 -0500
+Processing by DataController#productIndex as JSON
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

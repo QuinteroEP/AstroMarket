@@ -3,9 +3,10 @@ CREATE KEYSPACE productos WITH replication = {'class': 'SimpleStrategy', 'replic
 
 CREATE TABLE productos.product_info (
     id uuid PRIMARY KEY,
-    inventario int,
+    inventario bigint,
+    inventario_max bigint,
     nombre text,
-    precio float
+    precio double
 ) WITH additional_write_policy = '99p'
     AND bloom_filter_fp_chance = 0.01
     AND caching = {'keys': 'ALL', 'rows_per_partition': 'NONE'}

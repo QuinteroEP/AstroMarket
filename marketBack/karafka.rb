@@ -1,14 +1,19 @@
+# karafka.rb
+# frozen_string_literal: true
+
 class KarafkaApp < Karafka::App
   setup do |config|
-    config.kafka = { 'bootstrap.servers': '127.0.0.1:9092' }
-    config.client_id = "YOUR_APP_NAME-#{Process.pid}-#{Socket.gethostname}"
-    config.group_id = 'YOUR_APP_NAME_consumer'
-    config.consumer_persistence = !Rails.env.development?
+    config.client_id = "astro_market_app"
+    config.kafka = {
+      "bootstrap.servers": ENV.fetch("KAFKA_BROKERS", "localhost:9092")
+    }
   end
 
   routes.draw do
-    topic :example do
-      consumer ExampleConsumer
+    consumer_group :buyers do
+      topic :buyer_topic do
+        consumer DatabaseConsumer
+      end
     end
   end
 end

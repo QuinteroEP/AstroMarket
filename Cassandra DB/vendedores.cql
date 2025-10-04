@@ -28,7 +28,7 @@ CREATE TABLE vendedores.ventas (
     id uuid PRIMARY KEY,
     precio_unidad double,
     producto text,
-    unidades int
+    unidades_vendidas bigint
 ) WITH additional_write_policy = '99p'
     AND bloom_filter_fp_chance = 0.01
     AND caching = {'keys': 'ALL', 'rows_per_partition': 'NONE'}

@@ -52,6 +52,4 @@ gem 'sorted_set'
 
 gem 'karafka'
 
-gem "waterdrop"
-
 gem 'rack-cors'
