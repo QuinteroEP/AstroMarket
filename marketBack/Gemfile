@@ -49,3 +49,7 @@ end
 gem 'cassandra-driver'
 
 gem 'sorted_set'
+
+gem 'karafka'
+
+gem 'rack-cors'
