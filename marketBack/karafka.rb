@@ -5,8 +5,8 @@ class KarafkaApp < Karafka::App
   setup do |config|
     config.client_id = "astro_market_app"
     config.kafka = {
-      "bootstrap.servers": ENV.fetch("KAFKA_BROKERS", "localhost:9092")
-    }
+      "bootstrap.servers": ENV.fetch("KAFKA_BROKERS", "127.0.0.1:9092")
+  }
   end
 
   routes.draw do
@@ -25,6 +25,18 @@ class KarafkaApp < Karafka::App
       end
       topic :vendor_notfis do
         consumer NotifConsumer
+      end
+    end
+
+    consumer_group :items do
+      topic :item_create do
+        consumer ItemCreateConsumer
+      end
+      topic :item_delete do
+        consumer ItemDeleteConsumer
+      end
+      topic :item_update do
+        consumer PurchaseConsumer
       end
     end
   end

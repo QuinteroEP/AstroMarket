@@ -1,4 +1,5 @@
 class KafkaController < ApplicationController
+  
   def publish
     topic   = params[:topic]
     message = params[:message]

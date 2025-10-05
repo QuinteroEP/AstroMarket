@@ -1,16 +1,15 @@
+
 services:
   rails-web:
     build:
       context: ./marketBack
       dockerfile: Dockerfile
-    command: bash -lc "bundle exec rails server -b 0.0.0.0 -p 3000"
-    volumes:
-      - ./marketBack:/app
+    command: bash -lc "rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0 -p 3000"
     ports:
       - "3000:3000"
     environment:
       RAILS_ENV: development
-      KAFKA_BROKERS: upbeat_wu:9092
+      KAFKA_BROKERS: "127.0.0.1:9092"
       CASSANDRA_HOSTS: cassandra-db
     networks:
       - arq_net
@@ -20,27 +19,37 @@ services:
       context: ./marketBack
       dockerfile: Dockerfile
     command: bash -lc "bundle exec karafka server"
-    volumes:
-      - ./marketBack:/app
     environment:
       RAILS_ENV: development
-      KAFKA_BROKERS: upbeat_wu:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://upbeat_wu:9092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
       CASSANDRA_HOSTS: cassandra-db
     depends_on:
       - rails-web
     networks:
       - arq_net
       
-  astro:
-    build:
-      context: ./astroFront
-      dockerfile: Dockerfile
+  zookeeper:
+    image: zookeeper
+    container_name: zookeeper
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
     ports:
-      - "4321:4321"
-    networks:
-      - arq_net
+      - "2181:2181"
+
+  kafka:
+    image: apache/kafka:latest
+    container_name: upbeat_wu
     depends_on:
-      - rails-web
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://host.docker.internal:9092
+      - ALLOW_PLAINTEXT_LISTENER=yes
 
 networks:
    arq_net:

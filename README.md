@@ -14,6 +14,8 @@ Web Marketplace built with Astro JS, Ruby on Rails and Kafka
 Ejemplo: 'docker exec -i cassandra-db cqlsh < productos.cql', 'docker exec -it cassandra-db cqlsh -e "COPY productos.product_info FROM '/tmp/product_info.csv' WITH HEADER = true;"'
 
 # INSTALACION POR DOCKER
-1. Instalar la imagen de Kafka con el nombre 'upbeat_wu'
-2. Construir y ejecutar el Container del sistema con docker-compose up --build
-3. Acceder a la pagina por 'http://localhost:4321'
+1. Realizar la instalacion de la imagen de Cassandra
+2. Instalar la imagen de Kafka con el nombre 'upbeat_wu'
+3. Instalar de forma local Astro
+4. Construir y ejecutar el Container del sistema con 'docker-compose up --build'
+5. Acceder a la pagina por 'http://localhost:4321'
