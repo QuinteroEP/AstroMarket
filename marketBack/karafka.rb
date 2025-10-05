@@ -12,7 +12,19 @@ class KarafkaApp < Karafka::App
   routes.draw do
     consumer_group :buyers do
       topic :buyer_topic do
-        consumer DatabaseConsumer
+        consumer PurchaseConsumer
+      end
+    end
+
+    consumer_group :vendors do
+      topic :vendor_inventory do
+        consumer RestockConsumer
+      end
+      topic :vendor_sales do
+        consumer SalesConsumer
+      end
+      topic :vendor_notfis do
+        consumer NotifConsumer
       end
     end
   end

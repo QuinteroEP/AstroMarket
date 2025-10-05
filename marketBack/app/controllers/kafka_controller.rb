@@ -1,5 +1,8 @@
 class KafkaController < ApplicationController
   def publish
-    KafkaProducerService.publish("buyer_topic", params[:message])
+    topic   = params[:topic]
+    message = params[:message]
+
+    KafkaProducerService.publish(topic, message)
   end
 end

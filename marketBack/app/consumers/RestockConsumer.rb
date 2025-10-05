@@ -1,13 +1,13 @@
 require 'cassandra'
 
-class DatabaseConsumer < Karafka::BaseConsumer
+class RestockConsumer < Karafka::BaseConsumer
   def consume
     messages.each do |message|
-      puts "Mensaje de compra recibido: #{message.payload}"
+      puts "\nPeticion de restock para producto: #{message.payload}"
       product_id = Cassandra::Uuid.new(message.payload.strip)
 
       row = CASSANDRA_PRODUCT_SESSION.execute(
-        "SELECT inventario FROM product_info WHERE id = ?",
+        "SELECT * FROM product_info WHERE id = ?",
         arguments: [product_id]
       ).first
 
@@ -15,9 +15,10 @@ class DatabaseConsumer < Karafka::BaseConsumer
       
       if row
         current = row['inventario'].to_i
-        new_val = current - 1
+        max = row['inventario_max'].to_i
+        new_val = max
         puts "Current inventario: #{current}"
-        puts "New value: #{new_val}"
+        puts "New inventario: #{new_val}"
 
         begin
           result = CASSANDRA_PRODUCT_SESSION.execute(

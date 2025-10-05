@@ -1,12 +1,26 @@
 require 'cassandra'
 
-# connect to Cassandra cluster
+hosts = if ENV['CASSANDRA_HOSTS']
+  ENV.fetch("CASSANDRA_HOSTS").split(",")
+else
+  ['127.0.0.1']
+end
+
 CASSANDRA_CLUSTER = Cassandra.cluster(
-  # hosts: ['127.0.0.1'], - desarrollo local
-  # hosts: ENV.fetch("http://localhost").split(","), - docker
-  hosts: ['127.0.0.1'],
+  hosts: hosts,
   port: 9042
 )
 
-CASSANDRA_PRODUCT_SESSION = CASSANDRA_CLUSTER.connect('productos')
-CASSANDRA_PRODUCT_VENDOR = CASSANDRA_CLUSTER.connect('vendedores')
+begin
+  CASSANDRA_PRODUCT_SESSION = CASSANDRA_CLUSTER.connect('productos')
+  Rails.logger.info "✅ Connected to Cassandra keyspace: productos"
+rescue => e
+  Rails.logger.error "❌ Failed to connect to productos: #{e.message}"
+end
+
+begin
+  CASSANDRA_VENDOR_SESSION = CASSANDRA_CLUSTER.connect('vendedores')
+  Rails.logger.info "✅ Connected to Cassandra keyspace: vendedores"
+rescue => e
+  Rails.logger.error "❌ Failed to connect to vendedores: #{e.message}"
+end

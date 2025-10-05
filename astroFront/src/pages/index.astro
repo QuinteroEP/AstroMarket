@@ -111,7 +111,6 @@
 	table 
 	{
 	border: solid black 2px;
-	border-collapse: collapse;
 	text-align: center;
 	}
 
@@ -153,13 +152,29 @@
 		const target = event.currentTarget as HTMLButtonElement;
 		const id = target.dataset.id;
 
-		const messageSent = await fetch("http://localhost:3000/kafka/publish", {
+		await fetch("http://localhost:3000/kafka/publish", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ message: id }),
+			body: JSON.stringify({ message: id, topic: "buyer_topic"}),
         	});
-			
+
 		alert('Producto comprado.')
+
+		await fetch("http://localhost:3000/kafka/publish", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ message: id, topic: "vendor_notfis"}),
+        	});
+
+		console.log('Notifiacion enviada.')
+
+		await fetch("http://localhost:3000/kafka/publish", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ message: id, topic: "vendor_sales"}),
+        	});
+
+		console.log('Ventas actualizadas.')
     	location.reload()
 
 		});
