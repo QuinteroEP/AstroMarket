@@ -26,9 +26,9 @@ CREATE TABLE vendedores.notificaciones (
 
 CREATE TABLE vendedores.ventas (
     id uuid PRIMARY KEY,
-    precio_unidad double,
+    precio_unitario bigint,
     producto text,
-    unidades_vendidas bigint
+    unidades_vendidad bigint
 ) WITH additional_write_policy = '99p'
     AND bloom_filter_fp_chance = 0.01
     AND caching = {'keys': 'ALL', 'rows_per_partition': 'NONE'}

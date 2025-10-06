@@ -23,6 +23,8 @@
 					<th>Precio Unitario</th>
 					<th>Inventario Actual</th>
 					<th></th>
+					<th></th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody id="productos_data">
@@ -30,6 +32,22 @@
 			</tbody>
 		</table>
 
+		<h2>Registrar o modificar un produtcto</h2>
+		<div class="formulario">
+			<form id="productForm">
+				<label for="Nombre">Nombre del producto</label><br>
+				<input type="text" id="Nombre" name="Nombre"><br>
+
+				<label for="Precio">Precio</label><br>
+				<input type="number" id="Precio" name="Precio"><br>
+
+				<label for="InvMax">Inventario Maximo</label><br>
+				<input type="number" id="InvMax" name="InvMax"><br>
+
+				<input type="submit" id="submitBtn" value="submit">
+			</form>
+		</div>
+		
 		<h1>Notificaciones</h1>
 
 		<table id="notificaciones">
@@ -170,9 +188,34 @@
 	font-size: 20px;
 	}
 
+	.formulario
+	{
+		display: flex;
+		background-color: gray;
+		justify-content: center; /* centers form horizontally */
+    	align-items: center;
+		margin-left: 40%;
+		margin-right: 40%;
+	}
+
+	.formulario form
+	{
+		border: solid black 2px;
+		background-color: white;
+		font-size: 25px;
+		padding: 15px;
+	}
+
+	#submitBtn
+	{
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
 </style>
 
 <script>
+var id = '';
   async function loadData() {
     const productResponse = await fetch("http://localhost:3000/product_data.json");
     const productos = await productResponse.json();
@@ -180,10 +223,12 @@
     const tbodyProd = document.getElementById("productos_data");
     tbodyProd!.innerHTML = productos.map((producto: { nombre: any; precio: any; inventario: any; id: any; }) => `
       <tr>
-        <td>${producto.nombre}</td>
-        <td>${producto.precio}</td>
-        <td>${producto.inventario}</td>
+        <td class="prodNombre">${producto.nombre}</td>
+        <td class="prodPrecio">${producto.precio}</td>
+        <td class="prodInv">${producto.inventario}</td>
         <td><button class="Restock" data-id="${producto.id}">Reabastecer</button></td>
+		<td><button class="Update" data-id="${producto.id}">Modificar</button></td>
+		<td><button class="Delete" data-id="${producto.id}">Retirar</button></td>
       	</tr>`).join("");
 
 	const notifResponse = await fetch("http://localhost:3000/notifications.json");
@@ -219,22 +264,87 @@
 			body: JSON.stringify({ message: id, topic: "vendor_inventory" }),
         	});
 			
-		alert('Inventario reabastecido.')
+		alert('Inventario reabastecido')
     	location.reload()
 
 		});
     });
+
+	document.querySelectorAll(".Delete").forEach((btn) => {
+      btn.addEventListener("click", async (event) => {
+		const target = event.currentTarget as HTMLButtonElement;
+		const id = target.dataset.id;
+
+		await fetch("http://localhost:3000/kafka/publish", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ message: id, topic: "item_delete" }),
+        	});
+			
+		alert('Producto retirado del catalogo')
+    	location.reload()
+
+		});
+    });
+
+	document.querySelectorAll(".Update").forEach((btn) => {
+      btn.addEventListener("click", async (event) => {
+		const target = event.currentTarget as HTMLButtonElement;
+		const row = target.closest("tr")!;
+
+		// Get values from the row
+		const nombre = row.querySelector(".prodNombre")!.textContent!;
+		const precio = row.querySelector(".prodPrecio")!.textContent!;
+		const inventario = row.querySelector(".prodInv")!.textContent!;
+		id = target.dataset.id!;
+		console.log("id: " + id);
+
+		// Fill the form
+		(document.getElementById("Nombre") as HTMLInputElement).value = nombre;
+		(document.getElementById("Precio") as HTMLInputElement).value = precio;
+		(document.getElementById("InvMax") as HTMLInputElement).value = inventario;
+		
+		});
+    });
   }
 
-  document.addEventListener("DOMContentLoaded", loadData);
+  document.addEventListener("DOMContentLoaded", () => {
+
+  loadData();
+  
+  const form = document.getElementById('productForm');
+
+  form?.addEventListener('submit', async (e) => {
+   e.preventDefault();
+    
+   const nombre = (document.getElementById('Nombre') as HTMLInputElement)?.value;
+   const precio = (document.getElementById('Precio') as HTMLInputElement)?.value;
+   const InvMax = (document.getElementById('InvMax') as HTMLInputElement)?.value;
+   
+   const formData = {
+      nombre,
+	  precio,
+	  InvMax,
+	  id
+    };
+
+	console.log("id: " + id);
+
+	await fetch("http://localhost:3000/kafka/publish", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ message: JSON.stringify(formData), topic: "item_create"}),
+        	});
+
+	alert("Catalago modificado");
+	location.reload();
+});
 
   const update = document.getElementById("UpdateBtn")
   const salesValue = document.getElementById("totalValue")
   
   update?.addEventListener("click", async () => {
 	console.log("actualizando valor")
-
-    await fetch("http://localhost:3000/ventas/totales");
 	
 	const total_response = await fetch("http://localhost:3000/ventas/totales");
 	const Salesdata = await total_response.json();
@@ -243,4 +353,5 @@
       salesValue.innerText = `${value}$`;
     }
   });
+});
 </script>
