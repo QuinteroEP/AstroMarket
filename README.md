@@ -1,6 +1,9 @@
 # AstroMarket
 Web Marketplace built with Astro JS, Ruby on Rails and Kafka
 
+## Developers
+Juan Romero, Kamilt Diaz, Pablo Quintero
+
 # CARGAR BASE DE DATOS AL CONTAINER DE CASSANDRA
 ## Schemas y tablas 
 1. productos.cql: product_info.csv
